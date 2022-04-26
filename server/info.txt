@@ -1,0 +1,31 @@
+
+
+
+// php -S localhost:8000
+
+/*
+
+CREATE TABLE transactions(
+   id MEDIUMINT NOT NULL AUTO_INCREMENT,
+   category INT(3) NOT NULL,
+   amount INT(9) NOT NULL,
+   day DATE NOT NULL,
+   month int(3) NOT NULL,
+   PRIMARY KEY (id)
+);
+
+host : 62.149.150.249
+username : Sql919057
+password : cu2oyl110i (composta da dieci caratteri)
+nomedatabase : uno dei 5 già creati di default (Sql919057_1 , Sql919057_2 , Sql919057_3 , Sql919057_4 , Sql919057_5)
+
+
+
+$servername = "172.19.0.2:3306";
+$username = "root";
+$password = "example";
+$dbname = "weeks";
+
+
+
+*/
