@@ -1,16 +1,29 @@
 import { useContext, useState } from "react";
-import styled from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 import { AppContext } from './App';
+
+const enter = keyframes`
+  from {opacity: 0;}
+  to {opacity: 1;}
+`;
+
 
 const StyledDisplay = styled.div`
   padding: 80px 23px 33px 23px;
   margin: 0;
-  background-color: ${props => props.removing ? '#E64A19' : `#d4e157`};
+  background-color: ${({removing}) => removing ? '#E64A19' : `#d4e157`};
   text-align: center;
   font-size: 42px;
   position: relative;
   transition: all .3s linear;
-  color: ${props => props.removing ? '#fff' : `#000`};;
+  color: ${props => props.removing ? '#fff' : `#000`};
+  animation: ${({ saveStatus }) =>
+    saveStatus === 'saved!'
+      ? css`
+        ${enter} 0.7s linear alternate
+      `
+      : css``
+  };
   span {
     font-size: 22px;
   }
@@ -57,7 +70,7 @@ export const Display = ({ val, callbackRemove, saveStatus }) => {
     setRemoving(!removing);
   }
   return (
-    <StyledDisplay removing={removing}>
+    <StyledDisplay removing={removing} saveStatus={saveStatus}>
       <StyledBack onClick={openCategory}>{" < Back"}</StyledBack>
       <StyledRemove onClick={onRemove}>Remove</StyledRemove>
       <StyledAmount>{removing ? '-' : ''}{val}</StyledAmount>
