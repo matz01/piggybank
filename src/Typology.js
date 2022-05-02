@@ -30,7 +30,7 @@ const StyledTypologiesTitle = styled.div`
 
 const StyledTypology = styled.div`
   background-color: #fefefe;
-  flex-basis: 45%;
+  flex-basis: 48%;
   margin-bottom: 10px;
   font-size: 16px;
   text-align: left;
@@ -81,7 +81,7 @@ export const Typology = () => {
           <StyledTypology key={item.name} onClick={() => openAdd(item.id)}>
             <StyledName>{item.name}</StyledName>
             <FlexCont>
-              <Digit lablel={'spent'} val={item.spent} />
+              <Digit lablel={'spent'} val={item.spent} little/>
               <Digit lablel={'savings'} val={item.max - item.spent} colors/>
             </FlexCont>
             <Bar max={item.max} slim amount={item.spent}/>

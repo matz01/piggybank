@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.11e01cae.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.11e01cae.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Digits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Digits.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Typology.js" afterDir="false" />
     </list>
@@ -138,7 +134,7 @@
       <workItem from="1651215015497" duration="2632000" />
       <workItem from="1651217660541" duration="8000" />
       <workItem from="1651473307878" duration="4089000" />
-      <workItem from="1651509085925" duration="363000" />
+      <workItem from="1651509085925" duration="802000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>
