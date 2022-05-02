@@ -41,9 +41,15 @@ const StyledTypology = styled.div`
   box-sizing: border-box;
   border-radius: 10px;
   cursor: pointer;
-  height: 120px;
+  height: 112px;
 }
 `;
+
+const FlexCont = styled.div`
+  display: flex;
+  gap: 0 10px;
+  
+`
 
 const StyledGoToMonth = styled(StyledTypology)`
   background-color: cadetblue;
@@ -74,7 +80,10 @@ export const Typology = () => {
         {summary.map(item => (
           <StyledTypology key={item.name} onClick={() => openAdd(item.id)}>
             <StyledName>{item.name}</StyledName>
-            <Digit lablel={'savings'} val={item.max - item.spent} colors/>
+            <FlexCont>
+              <Digit lablel={'spent'} val={item.spent} />
+              <Digit lablel={'savings'} val={item.max - item.spent} colors/>
+            </FlexCont>
             <Bar max={item.max} slim amount={item.spent}/>
           </StyledTypology>
         ))}

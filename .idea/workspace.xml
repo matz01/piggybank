@@ -5,16 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.3f30bf4b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.3f30bf4b.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.3f30bf4b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.11e01cae.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.11e01cae.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Digits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Digits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Typology.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getSummary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +137,8 @@
       <workItem from="1651076893964" duration="333000" />
       <workItem from="1651215015497" duration="2632000" />
       <workItem from="1651217660541" duration="8000" />
-      <workItem from="1651473307878" duration="3676000" />
+      <workItem from="1651473307878" duration="4089000" />
+      <workItem from="1651509085925" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>
@@ -299,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650967923349</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="style">
+      <created>1651477026367</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1651477026367</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +339,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="manifest" />
     <MESSAGE value="package" />
-    <option name="LAST_COMMIT_MESSAGE" value="package" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

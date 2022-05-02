@@ -14,7 +14,7 @@ const StyledLabel = styled.div`
 
 const StyledNumber = styled.div`
   font-weight: bold;
-  font-size: 34px;
+  font-size: 28px;
   display: inline-block;
   line-height: 1;
 `;
@@ -25,7 +25,7 @@ const StyledEuro = styled.div`
 `;
 
 export const Digit = ({ lablel, val, colors }) => {
-  let color = '#1e202d'
+  let color = '#546E7A'
   if(colors){
     color = val < 0 ? '#8a051c': '#7CB342'
   }
