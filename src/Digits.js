@@ -9,7 +9,8 @@ const StyledDigit = styled.div`
 const StyledLabel = styled.div`
   margin-bottom: 0;
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 10px;
+  ${props => props.labelRight && 'text-align: right;'}
 `;
 
 const StyledNumber = styled.div`
@@ -24,14 +25,14 @@ const StyledEuro = styled.div`
   display: inline-block;
 `;
 
-export const Digit = ({ lablel, val, colors, little }) => {
+export const Digit = ({ lablel, val, colors, little, labelRight }) => {
   let color = '#546E7A'
   if(colors){
-    color = val < 0 ? '#8a051c': '#7CB342'
+    color = val < 0 ? '#E53935': '#7CB342'
   }
   return (
     <StyledDigit color={color}>
-      <StyledLabel>{lablel}</StyledLabel>
+      <StyledLabel labelRight={labelRight}>{lablel}</StyledLabel>
       <StyledNumber little={little}>{val}</StyledNumber>
       <StyledEuro>€</StyledEuro>
     </StyledDigit>

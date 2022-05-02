@@ -47,7 +47,7 @@ const StyledTypology = styled.div`
 
 const FlexCont = styled.div`
   display: flex;
-  gap: 0 10px;
+  justify-content: space-between;
   
 `
 
@@ -82,7 +82,7 @@ export const Typology = () => {
             <StyledName>{item.name}</StyledName>
             <FlexCont>
               <Digit lablel={'spent'} val={item.spent} little/>
-              <Digit lablel={'savings'} val={item.max - item.spent} colors/>
+              <Digit lablel={'savings'} val={item.max - item.spent} colors labelRight/>
             </FlexCont>
             <Bar max={item.max} slim amount={item.spent}/>
           </StyledTypology>
