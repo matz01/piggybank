@@ -5,12 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.55ed4f19.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.55ed4f19.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.55ed4f19.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Display.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Display.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/queries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.3f30bf4b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.3f30bf4b.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.3f30bf4b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Digits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Digits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Typology.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getSummary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +141,9 @@
       <workItem from="1650967150887" duration="25000" />
       <workItem from="1650967188214" duration="1357000" />
       <workItem from="1651076893964" duration="333000" />
-      <workItem from="1651215015497" duration="2068000" />
+      <workItem from="1651215015497" duration="2632000" />
+      <workItem from="1651217660541" duration="8000" />
+      <workItem from="1651473307878" duration="3676000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>

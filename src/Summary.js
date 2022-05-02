@@ -7,7 +7,7 @@ import { getMonthName } from './utils/getMonth';
 
 const StyledSummary = styled.div`
   position: relative;
-  padding: 40px 20px 0 20px;
+  padding: 20px 20px 0 20px;
 `;
 
 const StyledDigitContainer = styled.div`

@@ -25,7 +25,7 @@ const StyledMax = styled.div`
   background-color: #7cb342;
   border-radius: ${props => props.barHeight / 2}px;
   overflow: hidden;
-  box-shadow: inset 0px 2px 1px rgba(0,0,0,0.2);
+  //box-shadow: inset 0px 2px 1px rgba(0,0,0,0.2);
   transition: all .3s ease-in-out;
 `;
 
@@ -62,7 +62,7 @@ const StyledLabel = styled.div`
 
 
 export const Bar = ({ max, amount, label, slim, left }) => {
-  const barHeight = slim ? 10 : 20;
+  const barHeight = slim ? 6 : 20;
   const { widthAmount, widthMax } = calculateBar(max, amount);
   return (
     <StyledBar>

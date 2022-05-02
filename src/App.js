@@ -1,4 +1,5 @@
 import "./App.scss";
+import {ThemeProvider} from 'styled-components';
 import { createContext, useEffect, useState } from "react";
 import { Typology } from "./Typology";
 import { getWeek } from "./utils/getWeek";
@@ -7,6 +8,10 @@ import { getTransactions } from './utils/getTransactions';
 import { Monthly } from './Monthly';
 
 export const AppContext = createContext({});
+
+const theme = {
+	text: '#546E7A'
+};
 
 function App() {
 	const [view, setView] = useState("category");
@@ -27,27 +32,22 @@ function App() {
 		setView("category");
 	};
 
-	const openSituation = () => {
-		setView("monthly");
-	};
-
 	return (
-		<AppContext.Provider value={{openAdd, openCategory, openSituation, budget}}>
-			<div className="app">
-				{view === "add" && budget !== undefined &&
-					<AddAmount
-						id={scope}
-						weekNumber={weekNumber}
-					/>
-				}
-				{view === "category" && budget !== undefined &&
-					<Typology/>
-				}
-				{view === "monthly" && budget !== undefined &&
-					<Monthly/>
-				}
+		<AppContext.Provider value={{openAdd, openCategory, budget}}>
+			<ThemeProvider theme={theme}>
+				<div className="app">
+					{view === "add" && budget !== undefined &&
+						<AddAmount
+							id={scope}
+							weekNumber={weekNumber}
+						/>
+					}
+					{view === "category" && budget !== undefined &&
+						<Typology/>
+					}
 
-			</div>
+				</div>
+			</ThemeProvider>
 		</AppContext.Provider>
 	);
 }

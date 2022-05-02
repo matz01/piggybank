@@ -3,18 +3,20 @@ import styled from "styled-components";
 const StyledDigit = styled.div`
   color: ${props => props.color};
   text-align: left;
+  margin-bottom: 4px;
 `;
 
 const StyledLabel = styled.div`
-  margin-bottom: -5px;
+  margin-bottom: 0;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 9px;
 `;
 
 const StyledNumber = styled.div`
   font-weight: bold;
-  font-size: 32px;
+  font-size: 34px;
   display: inline-block;
+  line-height: 1;
 `;
 
 const StyledEuro = styled.div`
@@ -23,9 +25,9 @@ const StyledEuro = styled.div`
 `;
 
 export const Digit = ({ lablel, val, colors }) => {
-  let color = '#333'
+  let color = '#1e202d'
   if(colors){
-    color = val < 0 ? '#8a051c': '#126538'
+    color = val < 0 ? '#8a051c': '#7CB342'
   }
   return (
     <StyledDigit color={color}>

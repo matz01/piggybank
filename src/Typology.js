@@ -1,15 +1,23 @@
 import styled from "styled-components";
 import { AppContext } from './App';
-import { useContext } from 'react';
-import { getMonthName } from './utils/getMonth';
+import { useEffect, useState, useContext } from 'react';
+import { getMonth, getMonthName } from './utils/getMonth';
+import { Digit } from './Digits';
+import { Bar } from './Bar';
+
+import { getSummary } from './utils/getSummary';
+
+const StyledScroll = styled.div`
+  overflow: scroll;
+  height: 100vh;
+`;
 
 const StyledTypologies = styled.div`
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 20px 10px;
   display: flex;
-  gap: 20px 10px;
   justify-content: space-around;
-  align-items: stretch
+  overflow-scrolling: touch;
 `;
 
 const StyledTypologiesTitle = styled.div`
@@ -21,17 +29,19 @@ const StyledTypologiesTitle = styled.div`
 `;
 
 const StyledTypology = styled.div`
-  background-color: #D4E157;
-  flex: 1;
+  background-color: #fefefe;
+  flex-basis: 45%;
+  margin-bottom: 10px;
   font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 400;
   white-space: nowrap;
-  padding: 7px 30px;
-  height: 18px;
-  border-radius: 29px;
-  box-shadow: #666 0 1px 1px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
   cursor: pointer;
+  height: 120px;
 }
 `;
 
@@ -42,21 +52,33 @@ const StyledGoToMonth = styled(StyledTypology)`
   
 `
 
+const StyledName = styled.div`
+  margin-bottom: 10px;
+  color: #546E7A;
+  font-weight: bold;
+`
+
 export const Typology = () => {
   const { openAdd, budget, openSituation } = useContext(AppContext);
-  const month = getMonthName()
+  const [summary, setSummary] = useState([]);
+
+  const month = getMonth();
+
+  useEffect(() => {
+    getSummary(month, budget, setSummary);
+  }, []);
 
   return (
-    <>
-      <StyledTypologiesTitle>Categorie</StyledTypologiesTitle>
+    <StyledScroll>
       <StyledTypologies>
-        {budget.map((cat) => (
-          <StyledTypology key={cat.name} onClick={() => openAdd(cat.id)}>
-            {cat.name}
+        {summary.map(item => (
+          <StyledTypology key={item.name} onClick={() => openAdd(item.id)}>
+            <StyledName>{item.name}</StyledName>
+            <Digit lablel={'savings'} val={item.max - item.spent} colors/>
+            <Bar max={item.max} slim amount={item.spent}/>
           </StyledTypology>
         ))}
       </StyledTypologies>
-      <StyledGoToMonth onClick={openSituation}>Spese di {month}</StyledGoToMonth>
-    </>
+    </StyledScroll>
   );
 };
