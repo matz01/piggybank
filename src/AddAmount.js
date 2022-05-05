@@ -1,11 +1,12 @@
 import { KeyboardButton } from "./KeyboardButton";
 import { Keyboard } from "./Keyboard";
 import { Display } from "./Display";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useContext } from "react";
 import { Summary } from "./Summary";
 import axios from 'axios';
 import { dbPath } from './constants';
 import { getMonth } from './utils/getMonth';
+import { AppContext } from './App';
 
 export const AddAmount = ({  id, weekNumber }) => {
   const month = getMonth();
@@ -14,6 +15,7 @@ export const AddAmount = ({  id, weekNumber }) => {
   const [amount, setAmount] = useState(0);
   const [saveStatus, setSaveStatus] = useState('')
   const [removing, setRemoving] = useState(false);
+  const { openCategory } = useContext(AppContext);
 
   useEffect(() => {
     getTotal();
@@ -73,7 +75,8 @@ export const AddAmount = ({  id, weekNumber }) => {
       }
     })
       .then(function (response) {
-        getTotal(true)
+        openCategory()
+        //getTotal(true)
       })
       .catch(function (error) {
         setSaveStatus('error!')

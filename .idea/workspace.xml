@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Digits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Digits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.2ce7baef.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.2ce7baef.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.2ce7baef.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddAmount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddAmount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Typology.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +140,9 @@
       <workItem from="1651215015497" duration="2632000" />
       <workItem from="1651217660541" duration="8000" />
       <workItem from="1651473307878" duration="4089000" />
-      <workItem from="1651509085925" duration="1037000" />
+      <workItem from="1651509085925" duration="1209000" />
+      <workItem from="1651562286617" duration="9000" />
+      <workItem from="1651733328195" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>

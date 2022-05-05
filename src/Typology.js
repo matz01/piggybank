@@ -77,7 +77,7 @@ export const Typology = () => {
   return (
     <StyledScroll>
       <StyledTypologies>
-        {summary.map(item => (
+        {summary.sort((a, b) => (a.spent < b.spent) ? 1 : -1).map(item => (
           <StyledTypology key={item.name} onClick={() => openAdd(item.id)}>
             <StyledName>{item.name}</StyledName>
             <FlexCont>
