@@ -92,7 +92,7 @@ export const AddAmount = ({  id, weekNumber }) => {
         ))}
       </Keyboard>
 
-      <Summary id={id} weekNumber={weekNumber} val={val} amount={amount}/>
+      <Summary id={id} weekNumber={weekNumber} val={removing ? -val : val} amount={amount}/>
     </>
   );
 };
