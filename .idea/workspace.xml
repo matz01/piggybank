@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +137,7 @@
       <workItem from="1651509085925" duration="1209000" />
       <workItem from="1651562286617" duration="9000" />
       <workItem from="1651733328195" duration="721000" />
+      <workItem from="1651820382372" duration="830000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>

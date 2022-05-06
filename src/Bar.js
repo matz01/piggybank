@@ -60,8 +60,18 @@ const StyledLabel = styled.div`
   text-align: ${props => props.left ? 'left': 'center'};
 `;
 
+const StyledDay = styled.div`
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #eee;
+  left: ${props => props.dayPosition}%;
+  z-index: 4;
+`
 
-export const Bar = ({ max, amount, label, slim, left }) => {
+
+export const Bar = ({ max, amount, label, slim, left, dayPosition }) => {
   const barHeight = slim ? 6 : 20;
   const { widthAmount, widthMax } = calculateBar(max, amount);
   return (
@@ -72,6 +82,7 @@ export const Bar = ({ max, amount, label, slim, left }) => {
         <StyledMax width={widthMax} barHeight={barHeight}>
           <StyledAmount width={widthAmount} barHeight={barHeight}/>
         </StyledMax>
+        {dayPosition && <StyledDay dayPosition={dayPosition} />}
       </StyledBarContainer>
     </StyledBar>
   );

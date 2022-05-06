@@ -25,11 +25,19 @@ export const Summary = ({ amount, id, val }) => {
   const monthName = getMonthName();
 
   const label = `${budget.find((o) => o.id === id).name} di ${monthName}`;
+  const day = d.getDate();
+
+
+  const year = d.getFullYear();
+  const daysInMonth = new Date(year, month, 0).getDate();
+  const dayPosition = day/daysInMonth*100
+
+
 
 
   return (
     <StyledSummary>
-      <Bar max={max} amount={amount + val} label={label} />
+      <Bar max={max} amount={amount + val} label={label} dayPosition={dayPosition} />
       <StyledDigitContainer>
         <Digit lablel={"budget"} val={max} />
         <Digit lablel={"spesi"} val={amount + val} />
