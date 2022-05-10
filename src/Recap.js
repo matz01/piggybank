@@ -109,7 +109,7 @@ export const Recap = () => {
   const [fixedCosts, setFixedCosts] = useState(undefined)
   const [budget, setBudget] = useState(undefined)
   const [total, setTotal] = useState(undefined)
-  const [changed, setChanged] = useState(false)
+  const [changed, setChanged] = useState()
 
   const [incomeYear, setIncomeYear] = useState(undefined)
   const [fixedCostsYear, setFixedCostsYear] = useState(undefined)
