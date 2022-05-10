@@ -5,9 +5,15 @@ import { Typology } from "./Typology";
 import { getWeek } from "./utils/getWeek";
 import { AddAmount } from "./AddAmount";
 import { getTransactions } from './utils/getTransactions';
-import { Monthly } from './Monthly';
+import { Recap } from './Recap';
 
 export const AppContext = createContext({});
+
+export const SECTIONS = {
+	CATEGORY: "category",
+	ADD: "add",
+	RECAP: "recap"
+}
 
 const theme = {
 	text: '#546E7A'
@@ -25,25 +31,28 @@ function App() {
 
 	const openAdd = (id) => {
 		setScope(id);
-		setView("add");
+		setView(SECTIONS.ADD);
 	};
 
-	const openCategory = () => {
-		setView("category");
+	const openSection = (section) => {
+		setView(section);
 	};
 
 	return (
-		<AppContext.Provider value={{openAdd, openCategory, budget}}>
+		<AppContext.Provider value={{openAdd, openSection, budget}}>
 			<ThemeProvider theme={theme}>
 				<div className="app">
-					{view === "add" && budget !== undefined &&
+					{view === SECTIONS.ADD && budget !== undefined &&
 						<AddAmount
 							id={scope}
 							weekNumber={weekNumber}
 						/>
 					}
-					{view === "category" && budget !== undefined &&
+					{view === SECTIONS.CATEGORY && budget !== undefined &&
 						<Typology/>
+					}
+					{view === SECTIONS.RECAP &&
+						<Recap/>
 					}
 
 				</div>

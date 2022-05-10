@@ -9,3 +9,5 @@ export function getMonthName() {
 	const monthName = d.toLocaleString('default', { month: 'long' });
 	return monthName;
 }
+
+

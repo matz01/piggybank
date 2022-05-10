@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AppContext } from './App';
+import { AppContext, SECTIONS } from './App';
 import { useContext, useEffect, useState } from 'react';
 import { Bar } from './Bar';
 import { getMonth } from './utils/getMonth';
@@ -18,7 +18,7 @@ const StyledItem = styled.div`
 
 export const Monthly = () => {
 	const [summary, setSummary] = useState([]);
-	const { budget, openCategory } = useContext(AppContext);
+	const { budget, openSection } = useContext(AppContext);
 	const month = getMonth();
 
 	useEffect(() => {
@@ -27,7 +27,7 @@ export const Monthly = () => {
 
 
 	return (
-		<StyledSituation onClick={openCategory}>
+		<StyledSituation onClick={() => openSection(SECTIONS.CATEGORY)}>
 			{summary.filter(o => o[`m${month}`] > 0 || o.spent > 0).map(item => {
 				const max = item[`m${month}`];
 				return (

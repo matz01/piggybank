@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import styled, {css, keyframes} from "styled-components";
-import { AppContext } from './App';
+import { AppContext, SECTIONS } from './App';
 
 const enter = keyframes`
   from {opacity: 0;}
@@ -64,14 +64,14 @@ const StyledStatus = styled(StyledOptions)`
 
 export const Display = ({ val, callbackRemove, saveStatus }) => {
   const [removing, setRemoving] = useState(false);
-  const { openCategory } = useContext(AppContext);
+  const { openSection } = useContext(AppContext);
   const onRemove = () => {
     callbackRemove(!removing)
     setRemoving(!removing);
   }
   return (
     <StyledDisplay removing={removing} saveStatus={saveStatus}>
-      <StyledBack onClick={openCategory}>{" < Back"}</StyledBack>
+      <StyledBack onClick={() => openSection(SECTIONS.CATEGORY)}>{" < Back"}</StyledBack>
       <StyledRemove onClick={onRemove}>Remove</StyledRemove>
       <StyledAmount>{removing ? '-' : ''}{val}</StyledAmount>
       <StyledStatus>{saveStatus}</StyledStatus>

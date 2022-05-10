@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Row.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/header/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/getMonthlyTransactions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/getRecap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/getSummedData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/numberWithCommas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/weekserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/weekserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddAmount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddAmount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Display.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Display.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monthly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Typology.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/queries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getMonth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getMonth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,22 +60,27 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mvilla/work/pers/week/src/utils/getMonth.js&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mvilla/work/pers/week/src/utils&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs.jest.jest_package&quot;: &quot;/home/mvilla/work/pers/week/node_modules/react-scripts&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;/home/mvilla/.nvm/versions/node/v14.17.1/bin/node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/254/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/utils/getFixedCosts.js" />
+      <recent name="$PROJECT_DIR$/src/Row.js" />
+      <recent name="$PROJECT_DIR$/src/header/Header.js" />
       <recent name="$PROJECT_DIR$/src/utils/getMonth.js" />
       <recent name="$PROJECT_DIR$/src/utils/getTransactions.js" />
-      <recent name="$PROJECT_DIR$/src/constants.js" />
-      <recent name="$PROJECT_DIR$/constants.js" />
-      <recent name="$PROJECT_DIR$/src/calculateBar.js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/utils" />
@@ -138,7 +161,11 @@
       <workItem from="1651562286617" duration="9000" />
       <workItem from="1651733328195" duration="721000" />
       <workItem from="1651820382372" duration="960000" />
-      <workItem from="1651910278966" duration="308000" />
+      <workItem from="1651910278966" duration="585000" />
+      <workItem from="1651995021853" duration="10368000" />
+      <workItem from="1652078773870" duration="2914000" />
+      <workItem from="1652082543545" duration="6000" />
+      <workItem from="1652164408644" duration="726000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>
@@ -315,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651910584403</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="style">
+      <created>1651910599040</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1651910599040</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -37,7 +37,7 @@ $request = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 header("Access-Control-Allow-Origin: *");
 header("Content-type: application/json");
 
-$relativePath = "";
+$relativePath = "/week/weekserver.php";
 
 switch ($request) {
     case $relativePath . '/' :
@@ -144,8 +144,8 @@ switch ($request) {
 
 
 
-
     case $relativePath . '/monthly' :
+    
         $q = $_SERVER['QUERY_STRING'];
         parse_str($q, $get_array);
         $month = $get_array["month"];
@@ -157,7 +157,7 @@ switch ($request) {
         
         $sql = "SELECT category, SUM(amount) totalTransactions
         FROM transactions            
-        WHERE month = 4 GROUP BY category";
+        WHERE month = " . $month . " GROUP BY category";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -166,11 +166,9 @@ switch ($request) {
                 $el = new \stdClass();
                 $el->id = $row["category"];
                 $el->total = $row["totalTransactions"];
-                
                 array_push($elements, $el);
             }
             http_response_code(200);
-
             $myJSON = json_encode($elements);
             echo $myJSON;
             $conn->close();
@@ -179,6 +177,81 @@ switch ($request) {
         echo 0;
         $conn->close();
         
+        break;
+
+
+    case $relativePath . '/fixed_costs' :
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            handleConnectionError($conn);
+        }
+        
+        $sql = "SELECT * FROM fixed_costs";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $elements = array();
+            while($row = $result->fetch_assoc()) {
+                $el = new \stdClass();
+                $el->id = $row["id"];
+                $el->name = $row["name"];
+                $el->m1 = $row["m1"];
+                $el->m2 = $row["m2"];
+                $el->m3 = $row["m3"];
+                $el->m4 = $row["m4"];
+                $el->m5 = $row["m5"];
+                $el->m6 = $row["m6"];
+                $el->m7 = $row["m7"];
+                $el->m8 = $row["m8"];
+                $el->m9 = $row["m9"];
+                $el->m10 = $row["m10"];
+                $el->m11 = $row["m11"];
+                $el->m12 = $row["m12"];
+                array_push($elements, $el);
+            }
+        }
+            
+        http_response_code(200);
+        $myJSON = json_encode($elements);
+        echo $myJSON;
+        $conn->close();
+        break;
+
+    case $relativePath . '/income' :
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            handleConnectionError($conn);
+        }
+        
+        $sql = "SELECT * FROM income";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $elements = array();
+            while($row = $result->fetch_assoc()) {
+                $el = new \stdClass();
+                $el->id = $row["id"];
+                $el->name = $row["name"];
+                $el->m1 = $row["m1"];
+                $el->m2 = $row["m2"];
+                $el->m3 = $row["m3"];
+                $el->m4 = $row["m4"];
+                $el->m5 = $row["m5"];
+                $el->m6 = $row["m6"];
+                $el->m7 = $row["m7"];
+                $el->m8 = $row["m8"];
+                $el->m9 = $row["m9"];
+                $el->m10 = $row["m10"];
+                $el->m11 = $row["m11"];
+                $el->m12 = $row["m12"];
+                array_push($elements, $el);
+            }
+        }
+            
+        http_response_code(200);
+        $myJSON = json_encode($elements);
+        echo $myJSON;
+        $conn->close();
         break;
 
     default:

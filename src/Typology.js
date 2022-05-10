@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import { AppContext } from './App';
-import { useEffect, useState, useContext } from 'react';
-import { getMonth, getMonthName } from './utils/getMonth';
+import { AppContext, SECTIONS } from './App';
+import { useContext, useEffect, useState } from 'react';
+import { getMonth } from './utils/getMonth';
 import { Digit } from './Digits';
 import { Bar } from './Bar';
 
 import { getSummary } from './utils/getSummary';
+import * as PropTypes from 'prop-types';
+import { Header, StyledHeader } from './header/Header';
 
 const StyledScroll = styled.div`
   overflow: scroll;
@@ -13,6 +15,7 @@ const StyledScroll = styled.div`
 `;
 
 const StyledTypologies = styled.div`
+  margin-top: 30px;
   flex-wrap: wrap;
   padding: 20px 10px;
   display: flex;
@@ -20,13 +23,6 @@ const StyledTypologies = styled.div`
   overflow-scrolling: touch;
 `;
 
-const StyledTypologiesTitle = styled.div`
-  font-size: 20px;
-  text-align: center;
-  margin: 30px 0;
-  text-transform: uppercase;
-  color: #455a64;
-`;
 
 const StyledTypology = styled.div`
   background-color: #fefefe;
@@ -64,8 +60,9 @@ const StyledName = styled.div`
   font-weight: bold;
 `
 
+
 export const Typology = () => {
-  const { openAdd, budget, openSituation } = useContext(AppContext);
+  const { openAdd, budget, openSection } = useContext(AppContext);
   const [summary, setSummary] = useState([]);
 
   const month = getMonth();
@@ -76,6 +73,7 @@ export const Typology = () => {
 
   return (
     <StyledScroll>
+      <Header onClick={() => openSection(SECTIONS.RECAP)} label={'Recap'}/>
       <StyledTypologies>
         {summary.sort((a, b) => (a.spent < b.spent) ? 1 : -1).map(item => (
           <StyledTypology key={item.name} onClick={() => openAdd(item.id)}>

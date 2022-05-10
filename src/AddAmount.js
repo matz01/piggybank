@@ -7,6 +7,7 @@ import axios from 'axios';
 import { dbPath } from './constants';
 import { getMonth } from './utils/getMonth';
 import { AppContext } from './App';
+import { SECTIONS } from './utils/constants';
 
 export const AddAmount = ({  id, weekNumber }) => {
   const month = getMonth();
@@ -15,7 +16,7 @@ export const AddAmount = ({  id, weekNumber }) => {
   const [amount, setAmount] = useState(0);
   const [saveStatus, setSaveStatus] = useState('')
   const [removing, setRemoving] = useState(false);
-  const { openCategory } = useContext(AppContext);
+  const { openSection } = useContext(AppContext);
 
   useEffect(() => {
     getTotal();
@@ -75,7 +76,7 @@ export const AddAmount = ({  id, weekNumber }) => {
       }
     })
       .then(function (response) {
-        openCategory()
+        openSection(SECTIONS.CATEGORY)
         //getTotal(true)
       })
       .catch(function (error) {
