@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Row.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getMonthlyTransactions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getRecap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getSummedData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/numberWithCommas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/weekserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/weekserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddAmount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddAmount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Display.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Display.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Monthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monthly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Typology.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/queries.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getMonth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getMonth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +149,8 @@
       <workItem from="1651995021853" duration="10368000" />
       <workItem from="1652078773870" duration="2914000" />
       <workItem from="1652082543545" duration="6000" />
-      <workItem from="1652164408644" duration="726000" />
+      <workItem from="1652164408644" duration="1013000" />
+      <workItem from="1652198550700" duration="1942000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>

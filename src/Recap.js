@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { AppContext, SECTIONS } from './App';
 import { useContext, useEffect, useState } from 'react';
 import { getMonth, getMonthName } from './utils/getMonth';
@@ -26,6 +26,18 @@ const MONTHS = [
   "Dicembre"
 ]
 
+
+const enter = keyframes`
+  from {opacity: 0; left: 80px;}
+  to {opacity: 1; left: 0;}
+`;
+
+const exit = keyframes`
+  from {opacity: 0; left: -80px;}
+  to {opacity: 1; left: 0;}
+`;
+
+
 const StyledScroll = styled.div`
   overflow: scroll;
   height: 100vh;
@@ -41,32 +53,52 @@ const StyledMonthSelector = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 20px 10px;
   h2{
     text-transform: capitalize;
   }
 `
 
 const StyledYear = styled.div`
-  padding: 10px 20px 1px 20px;
+  padding: 20px 20px 1px 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 2px 8px 4px #00000007;
+  margin-top: 50px;
 `
+
+
+
 const StyledMonths = styled.div`
   padding: 10px 20px 2px 20px;
+  position: relative;
+  transform: translate3d(0,0,0);
+  animation: ${({ changed }) =>
+    changed !== undefined
+      ? css`
+        ${changed === 'right' ? enter : exit} 0.3s linear alternate
+      
+      `
+      : css``
+  };
   
 `
 
 const StyledPrevNext = styled.div`
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 11px;
-  height: 25px;
-  text-align: center;
   width: 30px;
+  height: 30px;
+  text-align: center;
   text-transform: uppercase;
-  padding-top: 5px;
+  position: relative;
+  svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 export const Recap = () => {
@@ -77,6 +109,7 @@ export const Recap = () => {
   const [fixedCosts, setFixedCosts] = useState(undefined)
   const [budget, setBudget] = useState(undefined)
   const [total, setTotal] = useState(undefined)
+  const [changed, setChanged] = useState(false)
 
   const [incomeYear, setIncomeYear] = useState(undefined)
   const [fixedCostsYear, setFixedCostsYear] = useState(undefined)
@@ -131,18 +164,31 @@ export const Recap = () => {
       setSaving(_ts)
   }, [monthly, allData]);
 
+  const setMonthHandler = (dir, val) => {
+    setChanged(dir);
+    setMonth(val)
+    setTimeout(() => {setChanged(undefined)}, 300)
+  }
+
 
 
   return (
     <StyledScroll>
       <Header onClick={() => openSection(SECTIONS.CATEGORY)} label={'Home'}/>
       <StyledPage>
-        <StyledMonths>
-          <StyledMonthSelector>
-            <StyledPrevNext><FontAwesomeIcon icon={faAngleLeft} onClick={() => setMonth(Math.max(month - 1, 1))} /></StyledPrevNext>
-            <h2>{MONTHS[month -1]}</h2>
-            <StyledPrevNext><FontAwesomeIcon icon={faAngleRight} onClick={() => setMonth(Math.min(month + 1, 12))} /></StyledPrevNext>
-          </StyledMonthSelector>
+
+        <StyledMonthSelector>
+          <StyledPrevNext onClick={() => setMonthHandler("left", Math.max(month - 1, 1))} >
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </StyledPrevNext>
+          <h2>{MONTHS[month -1]}</h2>
+          <StyledPrevNext onClick={() => setMonthHandler("right", Math.min(month + 1, 12))}>
+            <FontAwesomeIcon icon={faAngleRight}  />
+          </StyledPrevNext>
+        </StyledMonthSelector>
+
+        <StyledMonths changed={changed}>
+
 
           <Row label='Spese fisse' value={fixedCosts}/>
           <Row label='Variabili' value={budget}/>
