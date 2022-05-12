@@ -18,7 +18,7 @@ export const SECTIONS = {
 
 const theme = {
 	text: '#164E63',
-	mainColor: '#164E63'
+	mainColor: '#CFD8DC'
 };
 
 function App() {

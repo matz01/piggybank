@@ -22,14 +22,14 @@ const StyledTypology = styled.div`
 const StyledName = styled.div`
   margin-bottom: 10px;
   color: ${props => props.theme.text};
-  font-weight: bold;
+  font-weight: normal;
 `;
 export const Category = (props) => {
 	return <StyledTypology onClick={props.onClick}>
 		<StyledName>{props.item.name}</StyledName>
 		<FlexCont>
 			<Digit lablel={'spent'} val={props.item.spent} little/>
-			<Digit lablel={'savings'} val={props.item.max - props.item.spent} colors labelRight/>
+			<Digit lablel={'savings'} val={props.item.max - props.item.spent} colors labelRight little/>
 		</FlexCont>
 		<Bar max={props.item.max} slim amount={props.item.spent}/>
 	</StyledTypology>;

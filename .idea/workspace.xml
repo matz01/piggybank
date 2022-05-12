@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FlexCont.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MonthRecap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StyledPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/YearRecap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.81d68139.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.81d68139.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Digits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Digits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MonthRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthRecap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/YearRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/YearRecap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +161,10 @@
       <workItem from="1652198550700" duration="2048000" />
       <workItem from="1652200709590" duration="62000" />
       <workItem from="1652255930428" duration="33000" />
-      <workItem from="1652336163376" duration="5318000" />
+      <workItem from="1652336163376" duration="5442000" />
+      <workItem from="1652341905723" duration="9000" />
+      <workItem from="1652371928162" duration="708000" />
+      <workItem from="1652376784446" duration="1068000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>
@@ -359,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652200764887</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="styles">
+      <created>1652341520874</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1652341520874</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +409,8 @@
     <MESSAGE value="style" />
     <MESSAGE value="animation" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="styles" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

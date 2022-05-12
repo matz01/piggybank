@@ -4,7 +4,7 @@ import { Digit } from './Digits';
 import { FlexCont } from './FlexCont';
 
 const StyledYear = styled.div`
-  padding: 20px 20px 1px 20px;
+  padding: 40px 20px 1px 20px;
   background-color: #fff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;

@@ -8,7 +8,7 @@ const StyledRow = styled.div`
   font-size: 20px;
   padding: 25px 0 10px 0;
   border-top: solid 1px ${props => !props.white ? '#fff' : props.theme.text};
-  margin-top: 20px;
+  margin-top: 30px;
 	align-items: flex-end;
 	line-height: 1;
 	text-transform: uppercase;
@@ -16,21 +16,24 @@ const StyledRow = styled.div`
 `;
 
 const StyledValue = styled.div`
-  font-weight: bold;
   font-size: 1.5em;
   margin-bottom: -5px;
+  span{
+    font-weight: normal;
+  }
 	
 `;
 
 const StyledNumber = styled.div`
 	display: inline-block;
+  //font-weight: bold;
   font-size: 1.5em;
 	margin: 0 4px;
   ${props => props.negative ? 'color: #f44336;' : 'color: #84CC16;'}
 `;
 
 const StyledLabel = styled.div`
-  width: 40%;
+  width: 150px;
 `;
 
 const StyledPlus = styled.div`

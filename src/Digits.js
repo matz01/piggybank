@@ -8,17 +8,19 @@ const StyledDigit = styled.div`
 `;
 
 const StyledLabel = styled.div`
-  margin-bottom: 0;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 14px;
   ${props => props.labelRight && 'text-align: right;'}
+  margin-top: -5px;
+  font-weight: ${props => props.little ? 'normal' : 'bold'};
 `;
 
 const StyledNumber = styled.div`
-  font-weight: bold;
-  font-size: ${props => props.little ? '18px' : '30px'};
+  //font-weight: bold;
+  font-size: ${props => props.little ? '28px' : '36px'};
   display: inline-block;
   line-height: 1;
+  
 `;
 
 const StyledEuro = styled.div`
@@ -33,9 +35,9 @@ export const Digit = ({ lablel, val, colors, little, labelRight, white }) => {
   }
   return (
     <StyledDigit color={color}>
-      <StyledLabel labelRight={labelRight}>{lablel}</StyledLabel>
       <StyledNumber little={little}>{numberWithCommas(val)}</StyledNumber>
       <StyledEuro>€</StyledEuro>
+      <StyledLabel labelRight={labelRight}>{lablel}</StyledLabel>
     </StyledDigit>
   );
 }

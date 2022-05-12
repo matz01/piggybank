@@ -25,13 +25,13 @@ const exit = keyframes`
   }
 `;
 const StyledMonths = styled.div`
-  color: #fff;
+  color: ${props => props.theme.text};
   padding: 10px 20px 2px 20px;
   position: relative;
   transform: translate3d(0, 0, 0);
 	h2{
 		font-size: 24px;
-		margin: 10px 0 20px 0;
+		margin: 10px 0 30px 0;
 	}
   animation: ${({ changed }) =>
 		changed !== undefined
@@ -50,9 +50,9 @@ export const MonthRecap = ({ data, changed, saving, month }) => {
 		<StyledMonths changed={changed}>
 			<h2>{MONTHS[month - 1]}</h2>
 			<FlexCont>
-				<Digit val={fixedCosts} lablel="Fisse" white/>
-				<Digit val={budget} lablel="Variabili" white/>
-				<Digit val={income} lablel="Entrate" white/>
+				<Digit val={fixedCosts} lablel="Fisse" />
+				<Digit val={budget} lablel="Variabili" />
+				<Digit val={income} lablel="Entrate" />
 			</FlexCont>
 
 			<Row label="Totale Mese" value={saving ? (total + saving) : total} />
