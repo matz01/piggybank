@@ -5,12 +5,16 @@ export const StyledHeader = styled.div`
   background-color: #fff;
   color: #546E7A;
   font-weight: bold;
-  padding: 10px 20px;
-  text-align: right;
+  padding: 5px 0;
+	max-width: 150px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	margin: auto;
+	text-align: center;
   box-shadow: 2px 8px 4px #00000007;
 `;
 

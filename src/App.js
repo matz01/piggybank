@@ -1,11 +1,12 @@
 import "./App.scss";
-import {ThemeProvider} from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { createContext, useEffect, useState } from "react";
-import { Typology } from "./Typology";
+import { Categories } from "./Categories";
 import { getWeek } from "./utils/getWeek";
 import { AddAmount } from "./AddAmount";
 import { getTransactions } from './utils/getTransactions';
 import { Recap } from './Recap';
+import { StyledPage } from './StyledPage';
 
 export const AppContext = createContext({});
 
@@ -13,10 +14,11 @@ export const SECTIONS = {
 	CATEGORY: "category",
 	ADD: "add",
 	RECAP: "recap"
-}
+};
 
 const theme = {
-	text: '#546E7A'
+	text: '#164E63',
+	mainColor: '#164E63'
 };
 
 function App() {
@@ -26,7 +28,8 @@ function App() {
 
 	const weekNumber = getWeek();
 	useEffect(() => {
-		getTransactions(setBudget).then(() => {});
+		getTransactions(setBudget).then(() => {
+		});
 	}, []);
 
 	const openAdd = (id) => {
@@ -39,21 +42,22 @@ function App() {
 	};
 
 	return (
-		<AppContext.Provider value={{openAdd, openSection, budget}}>
+		<AppContext.Provider value={{ openAdd, openSection, budget }}>
 			<ThemeProvider theme={theme}>
 				<div className="app">
-					{view === SECTIONS.ADD && budget !== undefined &&
-						<AddAmount
-							id={scope}
-							weekNumber={weekNumber}
-						/>
-					}
-					{view === SECTIONS.CATEGORY && budget !== undefined &&
-						<Typology/>
-					}
-					{view === SECTIONS.RECAP &&
-						<Recap/>
-					}
+
+						{view === SECTIONS.ADD && budget !== undefined &&
+							<AddAmount
+								id={scope}
+								weekNumber={weekNumber}
+							/>
+						}
+						{view === SECTIONS.CATEGORY && budget !== undefined &&
+							<Categories/>
+						}
+						{view === SECTIONS.RECAP &&
+							<Recap/>
+						}
 
 				</div>
 			</ThemeProvider>

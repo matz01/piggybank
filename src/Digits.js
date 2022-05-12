@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { numberWithCommas } from './utils/numberWithCommas';
 
 const StyledDigit = styled.div`
   color: ${props => props.color};
@@ -25,15 +26,15 @@ const StyledEuro = styled.div`
   display: inline-block;
 `;
 
-export const Digit = ({ lablel, val, colors, little, labelRight }) => {
-  let color = '#546E7A'
+export const Digit = ({ lablel, val, colors, little, labelRight, white }) => {
+  let color = white ? '#ffffff' : '#546E7A'
   if(colors){
     color = val < 0 ? '#E53935': '#7CB342'
   }
   return (
     <StyledDigit color={color}>
       <StyledLabel labelRight={labelRight}>{lablel}</StyledLabel>
-      <StyledNumber little={little}>{val}</StyledNumber>
+      <StyledNumber little={little}>{numberWithCommas(val)}</StyledNumber>
       <StyledEuro>€</StyledEuro>
     </StyledDigit>
   );

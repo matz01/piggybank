@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="" />
+    <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FlexCont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MonthRecap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StyledPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/YearRecap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Digits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Digits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Typology.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,11 +68,11 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="es6.move.members.recent.items">
-      <recent name="$PROJECT_DIR$/src/utils/getFixedCosts.js" />
-      <recent name="$PROJECT_DIR$/src/Row.js" />
-      <recent name="$PROJECT_DIR$/src/header/Header.js" />
-      <recent name="$PROJECT_DIR$/src/utils/getMonth.js" />
-      <recent name="$PROJECT_DIR$/src/utils/getTransactions.js" />
+      <recent name="$PROJECT_DIR$/src/StyledPage.js" />
+      <recent name="$PROJECT_DIR$/src/utils/constants.js" />
+      <recent name="$PROJECT_DIR$/src/MonthRecap.js" />
+      <recent name="$PROJECT_DIR$/src/StyledMonths.js" />
+      <recent name="$PROJECT_DIR$/src/FlexCont.js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/utils" />
@@ -145,6 +159,9 @@
       <workItem from="1652082543545" duration="6000" />
       <workItem from="1652164408644" duration="1013000" />
       <workItem from="1652198550700" duration="2048000" />
+      <workItem from="1652200709590" duration="62000" />
+      <workItem from="1652255930428" duration="33000" />
+      <workItem from="1652336163376" duration="5318000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>
@@ -335,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652200546602</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix">
+      <created>1652200764887</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1652200764887</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,12 +394,12 @@
     <MESSAGE value="context and fix" />
     <MESSAGE value="monthly" />
     <MESSAGE value="monthly fetch" />
-    <MESSAGE value="fix" />
     <MESSAGE value="manifest" />
     <MESSAGE value="package" />
     <MESSAGE value="style" />
     <MESSAGE value="animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="animation" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
