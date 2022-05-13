@@ -6,7 +6,6 @@ import { getWeek } from "./utils/getWeek";
 import { AddAmount } from "./AddAmount";
 import { getTransactions } from './utils/getTransactions';
 import { Recap } from './Recap';
-import { StyledPage } from './StyledPage';
 
 export const AppContext = createContext({});
 

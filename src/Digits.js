@@ -9,14 +9,15 @@ const StyledDigit = styled.div`
 
 const StyledLabel = styled.div`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
   ${props => props.labelRight && 'text-align: right;'}
-  margin-top: -5px;
+  margin-top: 1px;
   font-weight: ${props => props.little ? 'normal' : 'bold'};
 `;
 
 const StyledNumber = styled.div`
   //font-weight: bold;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: ${props => props.little ? '28px' : '36px'};
   display: inline-block;
   line-height: 1;
@@ -24,7 +25,7 @@ const StyledNumber = styled.div`
 `;
 
 const StyledEuro = styled.div`
-  font-size: 12px;
+  font-size: 14px;
   display: inline-block;
 `;
 

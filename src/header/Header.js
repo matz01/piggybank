@@ -5,7 +5,7 @@ export const StyledHeader = styled.div`
   background-color: #fff;
   color: #546E7A;
   font-weight: bold;
-  padding: 5px 0;
+  padding: 10px 0;
 	max-width: 150px;
   top: 0;
   left: 0;
@@ -18,6 +18,6 @@ export const StyledHeader = styled.div`
   box-shadow: 2px 8px 4px #00000007;
 `;
 
-export const Header = ({ onClick, label }) => <StyledHeader>
-	<span onClick={onClick}>{`${label} >`}</span>
+export const Header = ({ onClick, label }) => <StyledHeader onClick={onClick}>
+	<span>{`${label} >`}</span>
 </StyledHeader>;

@@ -4,7 +4,8 @@ import { Digit } from './Digits';
 import { FlexCont } from './FlexCont';
 
 const StyledYear = styled.div`
-  padding: 40px 20px 1px 20px;
+	transition: bottom .2s linear;
+  padding: 40px 20px 10px 20px;
   background-color: #fff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -12,14 +13,14 @@ const StyledYear = styled.div`
   margin-top: 50px;
   color: ${props => props.theme.text};
 	position: fixed;
-	bottom: 0;
+	bottom: ${props => props.open ? -500 : 0 }px;
 	left: 0; 
 	right: 0;
 `;
-export const YearRecap = ({ data }) => {
+export const YearRecap = ({ data, open }) => {
 	if (!data) return null;
 	const { income, fixedCosts, budget, total } = data;
-	return <StyledYear>
+	return <StyledYear open={open}>
 		<FlexCont>
 			<Digit val={fixedCosts} lablel="Fisse" little/>
 			<Digit val={budget} lablel="Variabili" little />

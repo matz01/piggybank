@@ -12,6 +12,7 @@ import { getMonthlyTransactions } from './utils/getMonthlyTransactions';
 import { YearRecap } from './YearRecap';
 import { MonthRecap } from './MonthRecap';
 import { StyledPage } from './StyledPage';
+import { AllData } from './AllData';
 
 
 const StyledScroll = styled.div`
@@ -24,6 +25,15 @@ const StyledMonthSelector = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 10px 20px;
+`;
+
+const StyledButton = styled.div`
+  background-color: white;
+	padding: 8px 18px;
+	border-radius: 30px;
+	width: 200px;
+	margin: 25px auto 0 auto;
+	text-align: center;
 `;
 
 
@@ -51,6 +61,7 @@ export const Recap = () => {
 	const [month, setMonth] = useState(actualMont);
 	const [allData, setAllData] = useState(undefined);
 	const [changed, setChanged] = useState();
+	const [details, setDetails] = useState(false)
 
 	const [monthData, setMonthData] = useState(undefined);
 	const [yearData, setYearData] = useState(undefined);
@@ -90,6 +101,7 @@ export const Recap = () => {
 		if (allData) {
 			sumMonthData();
 			sumYearData();
+			console.log(allData)
 		}
 
 	}, [allData, month]);
@@ -118,6 +130,8 @@ export const Recap = () => {
 	};
 
 
+
+
 	return (
 		<StyledScroll>
 			<Header onClick={() => openSection(SECTIONS.CATEGORY)} label={'Home'}/>
@@ -133,7 +147,11 @@ export const Recap = () => {
 				</StyledMonthSelector>
 
 				<MonthRecap changed={changed} data={monthData} saving={saving} month={month}/>
-				<YearRecap data={yearData}/>
+				<YearRecap data={yearData} open={details}/>
+				<StyledButton onClick={() => setDetails(!details)}>{details ? 'Chiudi' : 'Dettaglio'}</StyledButton>
+				{ details &&
+						<AllData data={allData} month={month}/>
+				}
 			</StyledPage>
 		</StyledScroll>
 	);

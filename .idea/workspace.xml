@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AllData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AllDataSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.81d68139.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.81d68139.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Digits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Digits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonthRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthRecap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Row.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/YearRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/YearRecap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +68,11 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/AllDataSection.js" />
       <recent name="$PROJECT_DIR$/src/StyledPage.js" />
       <recent name="$PROJECT_DIR$/src/utils/constants.js" />
       <recent name="$PROJECT_DIR$/src/MonthRecap.js" />
       <recent name="$PROJECT_DIR$/src/StyledMonths.js" />
-      <recent name="$PROJECT_DIR$/src/FlexCont.js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/utils" />
@@ -164,7 +164,8 @@
       <workItem from="1652336163376" duration="5442000" />
       <workItem from="1652341905723" duration="9000" />
       <workItem from="1652371928162" duration="708000" />
-      <workItem from="1652376784446" duration="1068000" />
+      <workItem from="1652376784446" duration="1118000" />
+      <workItem from="1652424342477" duration="2939000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>

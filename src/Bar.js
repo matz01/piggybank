@@ -3,7 +3,7 @@ import { calculateBar } from './calculateBar';
 
 
 
-const StyledBar = styled.div`
+export const StyledBar = styled.div`
   margin-bottom: 16px;
   text-align: left;
 `;

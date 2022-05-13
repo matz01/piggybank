@@ -7,7 +7,7 @@ const StyledRow = styled.div`
   margin-bottom: 15px;
   font-size: 20px;
   padding: 25px 0 10px 0;
-  border-top: solid 1px ${props => !props.white ? '#fff' : props.theme.text};
+  border-top: solid 1px ${props => props.theme.text};
   margin-top: 30px;
 	align-items: flex-end;
 	line-height: 1;
@@ -18,6 +18,7 @@ const StyledRow = styled.div`
 const StyledValue = styled.div`
   font-size: 1.5em;
   margin-bottom: -5px;
+	font-family: 'Barlow Condensed', sans-serif;
   span{
     font-weight: normal;
   }
@@ -33,7 +34,7 @@ const StyledNumber = styled.div`
 `;
 
 const StyledLabel = styled.div`
-  width: 150px;
+  width: 110px;
 `;
 
 const StyledPlus = styled.div`
