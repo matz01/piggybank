@@ -26,7 +26,7 @@ const exit = keyframes`
 `;
 const StyledMonths = styled.div`
   color: ${props => props.theme.text};
-  padding: 10px 20px 2px 20px;
+  padding: 10px 40px 2px 40px;
   position: relative;
   transform: translate3d(0, 0, 0);
 	h2{

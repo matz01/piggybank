@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import { getMonth } from './utils/getMonth';
 
 import { getSummary } from './utils/getSummary';
-import { Header } from './header/Header';
+import { NavBar } from './header/NavBar';
 import { Category } from './Category';
 import { StyledPage } from './StyledPage';
 
@@ -14,7 +14,7 @@ const StyledScroll = styled.div`
 `;
 
 const StyledTypologies = styled.div`
-  margin-top: 30px;
+  margin-bottom: 70px;
   flex-wrap: wrap;
   padding: 0 10px;
   display: flex;
@@ -36,7 +36,7 @@ export const Categories = () => {
   return (
     <StyledPage>
     <StyledScroll>
-      <Header onClick={() => openSection(SECTIONS.RECAP)} label={'Recap'}/>
+      <NavBar onClick={() => openSection(SECTIONS.RECAP)} page={'add'}/>
       <StyledTypologies>
         {summary.sort((a, b) => (a.spent < b.spent) ? 1 : -1).map(item => (
           <Category key={item.name} onClick={() => openAdd(item.id)} item={item}/>

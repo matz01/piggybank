@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import { getMonth } from './utils/getMonth';
 
 import { getRecap } from './utils/getRecap';
-import { Header } from './header/Header';
+import { NavBar } from './header/NavBar';
 import { getSummedData } from './utils/getSummedData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -24,7 +24,7 @@ const StyledMonthSelector = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 20px;
+  margin: 20px 40px;
 `;
 
 const StyledButton = styled.div`
@@ -32,7 +32,7 @@ const StyledButton = styled.div`
 	padding: 8px 18px;
 	border-radius: 30px;
 	width: 200px;
-	margin: 25px auto 0 auto;
+	margin: 15px auto 0 auto;
 	text-align: center;
 `;
 
@@ -134,8 +134,7 @@ export const Recap = () => {
 
 	return (
 		<StyledScroll>
-			<Header onClick={() => openSection(SECTIONS.CATEGORY)} label={'Home'}/>
-			<StyledPage>
+			<NavBar onClick={() => openSection(SECTIONS.CATEGORY)} page={'recap'}/>
 
 				<StyledMonthSelector>
 					<StyledPrevNext onClick={() => setMonthHandler("left", Math.max(month - 1, 1))}>
@@ -152,7 +151,6 @@ export const Recap = () => {
 				{ details &&
 						<AllData data={allData} month={month}/>
 				}
-			</StyledPage>
 		</StyledScroll>
 	);
 };

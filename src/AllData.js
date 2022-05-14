@@ -4,7 +4,7 @@ import { AllDataSection } from './AllDataSection';
 
 
 const StyledSection = styled.div`
-  padding: 10px 50px;
+  padding: 10px 50px 70px 50px;
   color: ${props => props.theme.text};
 
   h3 {
@@ -15,8 +15,8 @@ const StyledSection = styled.div`
 export const AllData = ({ data, month }) => {
 	return (
 		<StyledSection>
-			<AllDataSection data={data.fixed_costs} title='Costi Fissi' month={month}/>
 			<AllDataSection data={data.budget} title='Variabili' month={month}/>
+			<AllDataSection data={data.fixed_costs} title='Costi Fissi' month={month}/>
 		</StyledSection>
 	);
 };

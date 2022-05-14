@@ -5,7 +5,7 @@ import { FlexCont } from './FlexCont';
 
 const StyledYear = styled.div`
 	transition: bottom .2s linear;
-  padding: 40px 20px 10px 20px;
+  padding: 40px 40px 10px 40px;
   background-color: #fff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -13,7 +13,7 @@ const StyledYear = styled.div`
   margin-top: 50px;
   color: ${props => props.theme.text};
 	position: fixed;
-	bottom: ${props => props.open ? -500 : 0 }px;
+	bottom: ${props => props.open ? -500 : 45 }px;
 	left: 0; 
 	right: 0;
 `;
