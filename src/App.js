@@ -6,13 +6,15 @@ import { getWeek } from "./utils/getWeek";
 import { AddAmount } from "./AddAmount";
 import { getTransactions } from './utils/getTransactions';
 import { Recap } from './Recap';
+import { Stats } from './Stats';
 
 export const AppContext = createContext({});
 
 export const SECTIONS = {
 	CATEGORY: "category",
 	ADD: "add",
-	RECAP: "recap"
+	RECAP: "recap",
+	STATS: "stats",
 };
 
 const theme = {
@@ -56,6 +58,9 @@ function App() {
 						}
 						{view === SECTIONS.RECAP &&
 							<Recap/>
+						}
+						{view === SECTIONS.STATS &&
+							<Stats/>
 						}
 
 				</div>

@@ -73,6 +73,56 @@ switch ($request) {
           $conn->close();
         break;
 
+    case $relativePath . '/groupByTag' :
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            handleConnectionError($conn);
+        }
+        
+        $sql = "SELECT sum(q1),sum(q2),sum(q3),sum(q4),sum(q5),sum(q6),sum(q7),sum(q8),sum(q9),sum(q10),sum(q11),sum(q12), tag
+                FROM(
+                    SELECT tag, sum(m1) as q1,sum(m2) as q2,sum(m3) as q3,sum(m4) as q4,sum(m5) as q5,sum(m6) as q6,sum(m7) as q7,sum(m8) as q8, sum(m9) as q9,sum(m10) as q10,sum(m11) as q11,sum(m12) as q12
+                    FROM `monthly_budgets`
+                    GROUP BY tag
+                    
+                    UNION ALL
+                    
+                    SELECT tag, sum(m1) as q1,sum(m2) as q2,sum(m3) as q3,sum(m4) as q4,sum(m5) as q5,sum(m6) as q6,sum(m7) as q7,sum(m8) as q8, sum(m9) as q9,sum(m10) as q10,sum(m11) as q11,sum(m12) as q12
+                    FROM `fixed_costs`
+                    GROUP BY tag
+                ) t 
+                GROUP BY tag";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $elements = array();
+            while($row = $result->fetch_assoc()) {
+                $el = new \stdClass();
+                $el->name = $row["tag"];
+                $el->m1 = $row["sum(q1)"];
+                $el->m2 = $row["sum(q2)"];
+                $el->m3 = $row["sum(q3)"];
+                $el->m4 = $row["sum(q4)"];
+                $el->m5 = $row["sum(q5)"];
+                $el->m6 = $row["sum(q6)"];
+                $el->m7 = $row["sum(q7)"];
+                $el->m8 = $row["sum(q8)"];
+                $el->m9 = $row["sum(q9)"];
+                $el->m10 = $row["sum(q10)"];
+                $el->m11 = $row["sum(q11)"];
+                $el->m12 = $row["sum(q12)"];
+                array_push($elements, $el);
+            }
+            }
+            
+            http_response_code(200);
+            $myJSON = json_encode($elements);
+            echo $myJSON;
+            $conn->close();
+        break;
+
+    
+
 
     case $relativePath . '/getTransactions' :
         $q = $_SERVER['QUERY_STRING'];
@@ -279,6 +329,12 @@ switch ($request) {
         $conn->close();
         
         break;
+
+
+
+
+    
+        
 
 
 

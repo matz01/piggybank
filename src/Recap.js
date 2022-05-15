@@ -11,14 +11,9 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { getMonthlyTransactions } from './utils/getMonthlyTransactions';
 import { YearRecap } from './YearRecap';
 import { MonthRecap } from './MonthRecap';
-import { StyledPage } from './StyledPage';
 import { AllData } from './AllData';
+import { StyledScroll } from './StyledScroll';
 
-
-const StyledScroll = styled.div`
-  overflow: scroll;
-  height: 100vh;
-`;
 
 const StyledMonthSelector = styled.div`
   display: flex;
@@ -101,7 +96,6 @@ export const Recap = () => {
 		if (allData) {
 			sumMonthData();
 			sumYearData();
-			console.log(allData)
 		}
 
 	}, [allData, month]);

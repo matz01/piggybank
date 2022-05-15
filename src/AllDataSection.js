@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import { numberWithCommas } from './utils/numberWithCommas';
 
 export const StyledNumber = styled.div`
   font-family: 'Barlow Condensed', sans-serif;
@@ -19,7 +20,12 @@ export const AllDataSection = ({ data, title, month }) => (
 		data.map(item =>
 			<StyledDetail key={item.name}>
 				<div>{item.name}</div>
-				<StyledNumber>{item[`m${month}`]}€</StyledNumber>
+				{
+					month
+					? <StyledNumber>{numberWithCommas(item[`m${month}`])}€</StyledNumber>
+					: <StyledNumber>{numberWithCommas(item['total'])}€</StyledNumber>
+				}
+
 			</StyledDetail>
 		)}
 	</>

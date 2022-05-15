@@ -33,3 +33,29 @@ export const getRecap = async (callback) => {
 		})
 
 };
+
+export const getTagRecap = async (callback) => {
+
+	const config = {
+		method: 'GET',
+		mode: 'no-cors',
+		redirect: 'follow',
+	}
+
+	let FIXED_URL = `${dbPath}/groupByTag`
+
+	const promise1 = axios.get(FIXED_URL, config);
+
+	Promise.all([promise1])
+		.then(function(values) {
+			const byTag = values?.[0]?.data;
+
+			callback({byTag})
+
+		})
+		.catch(function (error) {
+			console.log(error);
+			callback(undefined)
+		})
+
+};

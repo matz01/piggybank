@@ -16,3 +16,23 @@ export const getSummedData = (data, month, type) => {
 	return months.reduce((previousValue, currentValue) => previousValue + currentValue, 0);
 
 };
+
+export const getSummedByType = (type) => {
+	let total = 0;
+	for(let a = 1; a < 12; a++) {
+		total += parseInt(type[`m${a}`])
+	}
+	return total
+};
+
+
+export const fullDataWithTotal = (data, dataArray) => {
+	data.map(type => {
+		dataArray.push(
+			{
+				...type,
+				total: getSummedByType(type)
+			}
+		);
+	});
+};

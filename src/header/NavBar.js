@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { AppContext, SECTIONS } from '../App';
+import { useContext } from 'react';
 
 export const StyledHeader = styled.div`
   position: fixed;
@@ -6,7 +8,6 @@ export const StyledHeader = styled.div`
   background-color: #fff;
   color: #546E7A;
   font-weight: bold;
-
   bottom: 0;
   left: 0;
   right: 0;
@@ -17,31 +18,40 @@ export const StyledHeader = styled.div`
 `;
 
 export const StyledHeaderItem = styled.div`
-  width: 50%;
+  flex: 1;
 	height: 100%;
   padding: 12px 0;
-	&:first-child{
-		border-right: solid 1px #ccc;
+	text-transform: uppercase;
+  border-right: solid 1px #ccc;
+	&:last-child{
+		border-right: none
 	}
 	${props => props.selected && 'border-bottom: solid 4px #7cb342'}
 	
 `;
 
 
+const HeaderItem = ({ id, page, cb}) => {
+	const onClick = () => {
+		console.log(id)
+		cb(id)
+	}
+	return <StyledHeaderItem
+		onClick={() => page === id ? {} : onClick()}
+		selected={page === id}
+	>
+		{id}
+	</StyledHeaderItem>;
+};
 
-export const NavBar = ({ onClick, page }) => (
-	<StyledHeader>
-		<StyledHeaderItem
-			onClick={() => page === 'add' ? {} : onClick()}
-			selected={page === 'add'}
-		>
-			Add
-		</StyledHeaderItem>
-		<StyledHeaderItem
-			onClick={() => page === 'recap' ? {} : onClick()}
-			selected={page === 'recap'}
-		>
-			Recap
-		</StyledHeaderItem>
-	</StyledHeader>
-)
+
+export const NavBar = ({ page }) => {
+	const { openSection } = useContext(AppContext);
+	return (
+		<StyledHeader>
+			<HeaderItem cb={openSection} page={page} id={SECTIONS.CATEGORY}/>
+			<HeaderItem cb={openSection} page={page} id={SECTIONS.RECAP}/>
+			<HeaderItem cb={openSection} page={page} id={SECTIONS.STATS}/>
+		</StyledHeader>
+	)
+}

@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Stats.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StyledScroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StyledSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/weekserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/weekserver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AllData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AllDataSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllDataSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonthRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthRecap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/YearRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/YearRecap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getRecap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getSummedData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getSummedData.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +72,11 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/StyledSection.js" />
+      <recent name="$PROJECT_DIR$/src/utils/getSummedData.js" />
+      <recent name="$PROJECT_DIR$/src/StyledScroll.js" />
       <recent name="$PROJECT_DIR$/src/AllDataSection.js" />
       <recent name="$PROJECT_DIR$/src/StyledPage.js" />
-      <recent name="$PROJECT_DIR$/src/utils/constants.js" />
-      <recent name="$PROJECT_DIR$/src/MonthRecap.js" />
-      <recent name="$PROJECT_DIR$/src/StyledMonths.js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/utils" />
@@ -162,7 +170,8 @@
       <workItem from="1652371928162" duration="708000" />
       <workItem from="1652376784446" duration="1118000" />
       <workItem from="1652424342477" duration="3563000" />
-      <workItem from="1652513237639" duration="1010000" />
+      <workItem from="1652513237639" duration="1671000" />
+      <workItem from="1652604164404" duration="8875000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>
@@ -374,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652427339726</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="details">
+      <created>1652514273654</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1652514273654</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

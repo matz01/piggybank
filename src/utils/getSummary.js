@@ -22,7 +22,6 @@ export const getSummary = async (month, budget, callback) => {
 			callback(res);
 		})
 		.catch(function (error) {
-			console.log(error);
 			callback([])
 		})
 };

@@ -36,7 +36,7 @@ export const Categories = () => {
   return (
     <StyledPage>
     <StyledScroll>
-      <NavBar onClick={() => openSection(SECTIONS.RECAP)} page={'add'}/>
+      <NavBar page={SECTIONS.CATEGORY}/>
       <StyledTypologies>
         {summary.sort((a, b) => (a.spent < b.spent) ? 1 : -1).map(item => (
           <Category key={item.name} onClick={() => openAdd(item.id)} item={item}/>
