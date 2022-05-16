@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/piggybank/static/css/main.be94b026.css",
-    "main.js": "/piggybank/static/js/main.9eda2e1f.js",
+    "main.css": "/piggybank/static/css/main.ebd07caf.css",
+    "main.js": "/piggybank/static/js/main.a1f5ea80.js",
     "static/js/787.951ede28.chunk.js": "/piggybank/static/js/787.951ede28.chunk.js",
     "index.html": "/piggybank/index.html",
-    "main.be94b026.css.map": "/piggybank/static/css/main.be94b026.css.map",
-    "main.9eda2e1f.js.map": "/piggybank/static/js/main.9eda2e1f.js.map",
+    "main.ebd07caf.css.map": "/piggybank/static/css/main.ebd07caf.css.map",
+    "main.a1f5ea80.js.map": "/piggybank/static/js/main.a1f5ea80.js.map",
     "787.951ede28.chunk.js.map": "/piggybank/static/js/787.951ede28.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be94b026.css",
-    "static/js/main.9eda2e1f.js"
+    "static/css/main.ebd07caf.css",
+    "static/js/main.a1f5ea80.js"
   ]
 }

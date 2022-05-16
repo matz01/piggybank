@@ -73,8 +73,7 @@ export const Recap = () => {
 
 		setMonthData({
 			income: _i,
-			fixedCosts: _fc,
-			budget: _b,
+			costs: _fc + _b,
 			total: _i - _fc - _b,
 		});
 	};
@@ -86,8 +85,7 @@ export const Recap = () => {
 
 		setYearData({
 			income: _i,
-			fixedCosts: _fc,
-			budget: _b,
+			costs: _fc +  _b,
 			total: _i - _fc - _b,
 		});
 	};

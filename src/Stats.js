@@ -87,10 +87,9 @@ export const Stats = (props) => {
 					{
 						section === 'all' ?
 							<>
-								<AllDataSection data={allData.budget} title="Variabili"/>
-								<AllDataSection data={allData.fixed_costs} title="Costi Fissi"/>
+								<AllDataSection data={[...allData.budget, ...allData.fixed_costs].sort((a, b) => (a.name < b.name) ? -1 : 1)} title="Uscite"/>
 								<AllDataSection data={allData.income} title="Entrate"/>
-							</> : <AllDataSection data={allTagData.byTag} title="Per macro"/>
+							</> : <AllDataSection data={allTagData.byTag} title=""/>
 					}
 
 				</StyledSection>

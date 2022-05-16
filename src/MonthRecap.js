@@ -45,13 +45,12 @@ const StyledMonths = styled.div`
 `;
 export const MonthRecap = ({ data, changed, saving, month }) => {
 	if (!data) return null;
-	const { income, fixedCosts, budget, total } = data;
+	const { income, costs, total } = data;
 	return (
 		<StyledMonths changed={changed}>
 			<h2>{MONTHS[month - 1]}</h2>
 			<FlexCont>
-				<Digit val={fixedCosts} lablel="Fisse" />
-				<Digit val={budget} lablel="Variabili" />
+				<Digit val={costs} lablel="Uscite" />
 				<Digit val={income} lablel="Entrate" />
 			</FlexCont>
 

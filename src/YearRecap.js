@@ -19,11 +19,10 @@ const StyledYear = styled.div`
 `;
 export const YearRecap = ({ data, open }) => {
 	if (!data) return null;
-	const { income, fixedCosts, budget, total } = data;
+	const { income, costs, total } = data;
 	return <StyledYear open={open}>
 		<FlexCont>
-			<Digit val={fixedCosts} lablel="Fisse" little/>
-			<Digit val={budget} lablel="Variabili" little />
+			<Digit val={costs} lablel="Uscite" little/>
 			<Digit val={income} lablel="Entrate" little/>
 		</FlexCont>
 		<Row label="Totale Anno" value={total} white/>
