@@ -10,9 +10,9 @@ export const getRecap = async (callback) => {
 		redirect: 'follow',
 	}
 
-	let FIXED_URL = `${dbPath}/fixed_costs`
+	let FIXED_URL = `${dbPath}/outgoings?variable=false`
 	let INCOME_URL = `${dbPath}/income`
-	let MONTHLY_BUDGET_URL = `${dbPath}/budget`
+	let MONTHLY_BUDGET_URL = `${dbPath}/outgoings?variable=true`
 
 	const promise1 = axios.get(FIXED_URL, config);
 	const promise2 = axios.get(INCOME_URL, config);

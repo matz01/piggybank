@@ -7,6 +7,7 @@ import { fullDataWithTotal } from './utils/getSummedData';
 import { AllDataSection } from './AllDataSection';
 import { StyledSection } from './StyledSection';
 import styled from 'styled-components';
+import { getOutgoings } from './utils/getOutgoings';
 
 export const StyledTabs = styled.div`
   display: flex;
@@ -27,22 +28,19 @@ export const Stats = (props) => {
 	const [allData, setAllData] = useState(undefined);
 	const [allTagData, setAllTagData] = useState(undefined);
 	useEffect(() => {
-		getRecap(setFullData);
+		getOutgoings(setFullData);
 		getTagRecap(setFullTagData);
 	}, []);
 
 	const setFullData = (data) => {
 		if (!data) return;
-		const fixedGroupedByMonth = [];
-		const budgetGroupedByMonth = [];
+		const outgoingsGroupedByMonth = [];
 		const incomeGroupedByMonth = [];
-		fullDataWithTotal(data.fixed_costs, fixedGroupedByMonth);
-		fullDataWithTotal(data.budget, budgetGroupedByMonth);
+		fullDataWithTotal(data.outgoings, outgoingsGroupedByMonth);
 		fullDataWithTotal(data.income, incomeGroupedByMonth);
 		setAllData(
 			{
-				fixed_costs: fixedGroupedByMonth,
-				budget: budgetGroupedByMonth,
+				outgoings: outgoingsGroupedByMonth,
 				income: incomeGroupedByMonth,
 			}
 		);
@@ -87,7 +85,7 @@ export const Stats = (props) => {
 					{
 						section === 'all' ?
 							<>
-								<AllDataSection data={[...allData.budget, ...allData.fixed_costs].sort((a, b) => (a.name < b.name) ? -1 : 1)} title="Uscite"/>
+								<AllDataSection data={allData.outgoings.sort((a, b) => (a.name < b.name) ? -1 : 1)} title="Uscite"/>
 								<AllDataSection data={allData.income} title="Entrate"/>
 							</> : <AllDataSection data={allTagData.byTag} title=""/>
 					}

@@ -36,13 +36,64 @@ switch ($request) {
         echo "home";
         break;
 
+    case $relativePath . '/outgoings' :
+        
+        $queries = array();
+        $qr = parse_str($_SERVER['QUERY_STRING'], $queries);
+        $var = $queries['variable'];
+
+        
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            handleConnectionError($conn);
+        }
+
+        if(isset($var)){
+            $sql = "SELECT * FROM outgoings WHERE variable=" . $var ;
+        } else {
+            $sql = "SELECT * FROM outgoings ";
+        }
+        
+        
+        
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $elements = array();
+            while($row = $result->fetch_assoc()) {
+                $el = new \stdClass();
+                $el->id = $row["id"];
+                $el->name = $row["name"];
+                $el->m1 = $row["m1"];
+                $el->m2 = $row["m2"];
+                $el->m3 = $row["m3"];
+                $el->m4 = $row["m4"];
+                $el->m5 = $row["m5"];
+                $el->m6 = $row["m6"];
+                $el->m7 = $row["m7"];
+                $el->m8 = $row["m8"];
+                $el->m9 = $row["m9"];
+                $el->m10 = $row["m10"];
+                $el->m11 = $row["m11"];
+                $el->m12 = $row["m12"];
+                array_push($elements, $el);
+            }
+            }
+            
+            http_response_code(200);
+            $myJSON = json_encode($elements);
+            echo $myJSON;
+            $conn->close();
+        break;
+
+
     case $relativePath . '/budget' :
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {
             handleConnectionError($conn);
         }
         
-        $sql = "SELECT * FROM monthly_budgets";
+        $sql = "SELECT * FROM outgoings WHERE variable=true";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -73,24 +124,16 @@ switch ($request) {
           $conn->close();
         break;
 
+    
+
     case $relativePath . '/groupByTag' :
         $conn = new mysqli($servername, $username, $password, $dbname);
         if ($conn->connect_error) {
             handleConnectionError($conn);
         }
         
-        $sql = "SELECT sum(q1),sum(q2),sum(q3),sum(q4),sum(q5),sum(q6),sum(q7),sum(q8),sum(q9),sum(q10),sum(q11),sum(q12), tag
-                FROM(
-                    SELECT tag, sum(m1) as q1,sum(m2) as q2,sum(m3) as q3,sum(m4) as q4,sum(m5) as q5,sum(m6) as q6,sum(m7) as q7,sum(m8) as q8, sum(m9) as q9,sum(m10) as q10,sum(m11) as q11,sum(m12) as q12
-                    FROM `monthly_budgets`
-                    GROUP BY tag
-                    
-                    UNION ALL
-                    
-                    SELECT tag, sum(m1) as q1,sum(m2) as q2,sum(m3) as q3,sum(m4) as q4,sum(m5) as q5,sum(m6) as q6,sum(m7) as q7,sum(m8) as q8, sum(m9) as q9,sum(m10) as q10,sum(m11) as q11,sum(m12) as q12
-                    FROM `fixed_costs`
-                    GROUP BY tag
-                ) t 
+        $sql = "SELECT sum(m1),sum(m2),sum(m3),sum(m4),sum(m5),sum(m6),sum(m7),sum(m8),sum(m9),sum(m10),sum(m11),sum(m12), tag
+                FROM `outgoings`
                 GROUP BY tag";
         $result = $conn->query($sql);
 
@@ -99,18 +142,18 @@ switch ($request) {
             while($row = $result->fetch_assoc()) {
                 $el = new \stdClass();
                 $el->name = $row["tag"];
-                $el->m1 = $row["sum(q1)"];
-                $el->m2 = $row["sum(q2)"];
-                $el->m3 = $row["sum(q3)"];
-                $el->m4 = $row["sum(q4)"];
-                $el->m5 = $row["sum(q5)"];
-                $el->m6 = $row["sum(q6)"];
-                $el->m7 = $row["sum(q7)"];
-                $el->m8 = $row["sum(q8)"];
-                $el->m9 = $row["sum(q9)"];
-                $el->m10 = $row["sum(q10)"];
-                $el->m11 = $row["sum(q11)"];
-                $el->m12 = $row["sum(q12)"];
+                $el->m1 = $row["sum(m1)"];
+                $el->m2 = $row["sum(m2)"];
+                $el->m3 = $row["sum(m3)"];
+                $el->m4 = $row["sum(m4)"];
+                $el->m5 = $row["sum(m5)"];
+                $el->m6 = $row["sum(m6)"];
+                $el->m7 = $row["sum(m7)"];
+                $el->m8 = $row["sum(m8)"];
+                $el->m9 = $row["sum(m9)"];
+                $el->m10 = $row["sum(m10)"];
+                $el->m11 = $row["sum(m11)"];
+                $el->m12 = $row["sum(m12)"];
                 array_push($elements, $el);
             }
             }
@@ -186,40 +229,7 @@ switch ($request) {
 
 
 
-    case $relativePath . '/monthly' :
     
-        $q = $_SERVER['QUERY_STRING'];
-        parse_str($q, $get_array);
-        $month = $get_array["month"];
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            handleConnectionError($conn);
-        }
-        
-        $sql = "SELECT category, SUM(amount) totalTransactions
-        FROM transactions            
-        WHERE month = " . $month . " GROUP BY category";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            $elements = array();
-            while($row = $result->fetch_assoc()) {
-                $el = new \stdClass();
-                $el->id = $row["category"];
-                $el->total = $row["totalTransactions"];
-                array_push($elements, $el);
-            }
-            http_response_code(200);
-            $myJSON = json_encode($elements);
-            echo $myJSON;
-            $conn->close();
-            break;
-        }
-        echo 0;
-        $conn->close();
-        
-        break;
 
     case $relativePath . '/fixed_costs' :
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -227,7 +237,7 @@ switch ($request) {
             handleConnectionError($conn);
         }
         
-        $sql = "SELECT * FROM fixed_costs";
+        $sql = "SELECT * FROM outgoings WHERE variable=false";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
