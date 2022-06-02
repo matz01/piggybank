@@ -5,7 +5,7 @@ import { numberWithCommas } from './utils/numberWithCommas';
 export const StyledNumber = styled.div`
   font-family: 'Barlow Condensed', sans-serif;
   ${props => props.red && `color:#E53935;`}
-  ${props => props.green && `color:#7CB342;`}
+  ${props => props.green && `color:#43A047;`}
 `;
 
 const StyledSubItems = styled.div`

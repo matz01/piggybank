@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/budgetAndTransactions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/weekserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/weekserver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AllData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AllDataSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllDataSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getRecap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getSummedData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getSummedData.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +166,7 @@
       <workItem from="1652778236987" duration="9000" />
       <workItem from="1654065610695" duration="1776000" />
       <workItem from="1654094246092" duration="11000" />
-      <workItem from="1654162866174" duration="5266000" />
+      <workItem from="1654162866174" duration="5477000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>

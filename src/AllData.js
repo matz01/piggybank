@@ -11,7 +11,8 @@ export const AllData = ({ data, month }) => {
 	console.log(variables)
 	return (
 		<StyledSection>
-			<AllDataSection data={[...variables, ...mappedFC]} title='Uscite' month={month}/>
+			<AllDataSection data={variables} title='Variabili' month={month}/>
+			<AllDataSection data={mappedFC} title='Fisse' month={month}/>
 			<AllDataSection data={mappedIncome} title='Entrate' month={month}/>
 		</StyledSection>
 	);
