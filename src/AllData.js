@@ -1,19 +1,15 @@
 import React from 'react';
 import { AllDataSection } from './AllDataSection';
 import { StyledSection } from './StyledSection';
-import { budgetAndTransactions, mappedCosts } from './utils/budgetAndTransactions';
 
 
 export const AllData = ({ data, month }) => {
-	const variables = budgetAndTransactions(data)
-	const {mappedFC, mappedIncome} = mappedCosts(data, month)
-
-	console.log(variables)
+	const { variables, fixed, inc } = data;
 	return (
 		<StyledSection>
-			<AllDataSection data={variables} title='Variabili' month={month}/>
-			<AllDataSection data={mappedFC} title='Fisse' month={month}/>
-			<AllDataSection data={mappedIncome} title='Entrate' month={month}/>
+			<AllDataSection data={variables} title="Variabili" month={month}/>
+			<AllDataSection data={fixed} title="Fisse" month={month}/>
+			<AllDataSection data={inc} title="Entrate" month={month}/>
 		</StyledSection>
 	);
 };

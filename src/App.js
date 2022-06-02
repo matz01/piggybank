@@ -7,6 +7,9 @@ import { AddAmount } from "./AddAmount";
 import { getTransactions } from './utils/getTransactions';
 import { Recap } from './Recap';
 import { Stats } from './Stats';
+import { getRecap } from './utils/getRecap';
+import { budgetAndTransactions, mappedCosts } from './utils/budgetAndTransactions';
+import { getMonth } from './utils/getMonth';
 
 export const AppContext = createContext({});
 
@@ -24,14 +27,24 @@ const theme = {
 
 function App() {
 	const [view, setView] = useState("category");
+	const [allData, setAllData] = useState(undefined);
+	const [rowData, setRowData] = useState(undefined);
 	const [budget, setBudget] = useState();
 	const [scope, setScope] = useState();
 
 	const weekNumber = getWeek();
 	useEffect(() => {
-		getTransactions(setBudget).then(() => {
-		});
+		getTransactions(setBudget)
+		getRecap(setRowData);
 	}, []);
+
+	useEffect(() => {
+		if(!rowData) return
+		const month = getMonth()
+		const variables = budgetAndTransactions(rowData)
+		const {fixed, inc} = mappedCosts(rowData, month)
+		setAllData({ variables, fixed, inc })
+	}, [rowData])
 
 	const openAdd = (id) => {
 		setScope(id);
@@ -43,7 +56,7 @@ function App() {
 	};
 
 	return (
-		<AppContext.Provider value={{ openAdd, openSection, budget }}>
+		<AppContext.Provider value={{ openAdd, openSection, budget, allData }}>
 			<ThemeProvider theme={theme}>
 				<div className="app">
 

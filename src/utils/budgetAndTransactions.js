@@ -67,8 +67,8 @@ export const budgetAndTransactions = (data) => {
 
 export const mappedCosts = (data, month) => {
 	const { fixed_costs, income } = data;
-	const mappedFC = fixed_costs.map(costMapper(month));
-	const mappedIncome = income.map(costMapper(month));
+	const fixed = fixed_costs.map(costMapper(month));
+	const inc = income.map(costMapper(month));
 
-	return { mappedFC, mappedIncome };
+	return { fixed, inc };
 };

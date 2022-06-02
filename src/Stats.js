@@ -85,7 +85,7 @@ export const Stats = (props) => {
 					{
 						section === 'all' ?
 							<>
-								<AllDataSection data={allData.outgoings.sort((a, b) => (a.name < b.name) ? -1 : 1)} title="Uscite"/>
+								<AllDataSection data={allData.outgoings.sort((a, b) => (parseInt(a.total) < parseInt(b.total)) ? 1 : -1)} title="Uscite"/>
 								<AllDataSection data={allData.income} title="Entrate"/>
 							</> : <AllDataSection data={allTagData.byTag} title=""/>
 					}

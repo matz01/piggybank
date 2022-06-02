@@ -54,7 +54,6 @@ const StyledPrevNext = styled.div`
 export const Recap = () => {
 	const actualMont = getMonth();
 	const [month, setMonth] = useState(actualMont);
-	const [allData, setAllData] = useState(undefined);
 	const [changed, setChanged] = useState();
 	const [details, setDetails] = useState(false)
 
@@ -63,31 +62,35 @@ export const Recap = () => {
 
 	const [monthly, setMonthly] = useState(undefined);
 	const [saving, setSaving] = useState(undefined);
-	const { openSection } = useContext(AppContext);
+	const { openSection, allData } = useContext(AppContext);
 
 
 	const sumMonthData = () => {
-		const _fc = getSummedData(allData, month, 'fixed_costs');
-		const _b = getSummedData(allData, month, 'budget');
-		const _i = getSummedData(allData, month, 'income');
+		const _fc = getSummedData(allData, month, 'fixed');
+		const _b = getSummedData(allData, month, 'variables');
+		const _i = getSummedData(allData, month, 'inc');
+		const savings = getSummedData(allData, month, 'variables', true);
 
 
 		setMonthData({
 			income: _i,
 			costs: _fc + _b,
 			total: _i - _fc - _b,
+			savings,
 		});
 	};
 
 	const sumYearData = () => {
-		const _fc = getSummedData(allData, undefined, 'fixed_costs');
-		const _b = getSummedData(allData, undefined, 'budget');
-		const _i = getSummedData(allData, undefined, 'income');
+		const _fc = getSummedData(allData, undefined, 'fixed');
+		const _b = getSummedData(allData, undefined, 'variables');
+		const _i = getSummedData(allData, undefined, 'inc');
+		const savings = getSummedData(allData, undefined, 'variables', true);
 
 		setYearData({
 			income: _i,
 			costs: _fc +  _b,
 			total: _i - _fc - _b,
+			savings,
 		});
 	};
 
@@ -100,7 +103,6 @@ export const Recap = () => {
 	}, [allData, month]);
 
 	useEffect(() => {
-		getRecap(setAllData);
 		getMonthlyTransactions(month - 1, setMonthly);
 	}, []);
 
@@ -138,7 +140,7 @@ export const Recap = () => {
 					</StyledPrevNext>
 				</StyledMonthSelector>
 
-				<MonthRecap changed={changed} data={monthData} saving={saving} month={month}/>
+				<MonthRecap changed={changed} data={monthData} month={month}/>
 				<YearRecap data={yearData} open={details}/>
 				<StyledButton onClick={() => setDetails(!details)}>{details ? 'Chiudi' : 'Dettaglio'}</StyledButton>
 				{ details &&

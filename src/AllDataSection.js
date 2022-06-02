@@ -46,7 +46,7 @@ export const AllDataSection = ({ data, title, month }) => (
 	<>
 		<h3>{title}</h3>
 		{
-			data.map(item =>
+			data.sort((a, b) => (parseInt(a[`m${month}`]) > parseInt(b[`m${month}`])) ? -1 : 1).map(item =>
 				<StyledDetail key={item.name}>
 					<div>{item.name}</div>
 					{

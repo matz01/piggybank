@@ -43,18 +43,19 @@ const StyledMonths = styled.div`
   };
 
 `;
-export const MonthRecap = ({ data, changed, saving, month }) => {
+export const MonthRecap = ({ data, changed, month }) => {
 	if (!data) return null;
-	const { income, costs, total } = data;
+	const { income, costs, total, savings } = data;
 	return (
 		<StyledMonths changed={changed}>
 			<h2>{MONTHS[month - 1]}</h2>
 			<FlexCont>
 				<Digit val={costs} lablel="Uscite" />
+				{savings !== 0 && <Digit val={savings} lablel="Risparmio" colors/>}
 				<Digit val={income} lablel="Entrate" />
 			</FlexCont>
 
-			<Row label="Totale Mese" value={saving ? (total + saving) : total} />
+			<Row label="Totale Mese" value={total} />
 		</StyledMonths>
 		);
 };
