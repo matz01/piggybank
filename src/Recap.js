@@ -71,6 +71,7 @@ export const Recap = () => {
 		const _b = getSummedData(allData, month, 'budget');
 		const _i = getSummedData(allData, month, 'income');
 
+
 		setMonthData({
 			income: _i,
 			costs: _fc + _b,

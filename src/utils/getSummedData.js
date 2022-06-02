@@ -36,3 +36,5 @@ export const fullDataWithTotal = (data, dataArray) => {
 		);
 	});
 };
+
+

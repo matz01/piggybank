@@ -382,6 +382,41 @@ switch ($request) {
         
         break;
 
+
+    case $relativePath . '/allTransactions' :
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            handleConnectionError($conn);
+        }
+        
+        $sql = "SELECT category, month, SUM(amount) totalTransactions
+        FROM transactions            
+        GROUP BY category, month
+        ORDER BY month";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $elements = array();
+            while($row = $result->fetch_assoc()) {
+                $el = new \stdClass();
+                $el->id = $row["category"];
+                $el->month = $row["month"];
+                $el->total = $row["totalTransactions"];
+                array_push($elements, $el);
+            }
+            http_response_code(200);
+            $myJSON = json_encode($elements);
+            echo $myJSON;
+            $conn->close();
+            break;
+        }
+        echo 0;
+        $conn->close();
+        
+        break;
+
+
         
     default:
         echo "404";
