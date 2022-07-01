@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c0a87e8b-24b7-4bc8-b0e2-623abf9cb32f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AllData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AllDataSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AllDataSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonthRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthRecap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/YearRecap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/YearRecap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/budgetAndTransactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/budgetAndTransactions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getSummedData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getSummedData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/numberWithCommas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/numberWithCommas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +167,11 @@
       <workItem from="1654065610695" duration="1776000" />
       <workItem from="1654094246092" duration="11000" />
       <workItem from="1654162866174" duration="5477000" />
-      <workItem from="1654171964778" duration="4273000" />
+      <workItem from="1654171964778" duration="4758000" />
+      <workItem from="1654243433115" duration="8000" />
+      <workItem from="1656690228593" duration="49000" />
+      <workItem from="1656691177359" duration="8000" />
+      <workItem from="1656691932853" duration="2409000" />
     </task>
     <task id="LOCAL-00001" summary="build">
       <created>1649833638184</created>

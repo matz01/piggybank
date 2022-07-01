@@ -12,7 +12,8 @@ export const budgetAndTransactions = (data) => {
 
 	function getByMonths(budget, transactions, month) {
 		if (month >= actualMonth) return { m: parseInt(budget), s: 0 };
-		const m = parseInt(transactions.filter(o => parseInt(o.month) === month)?.[0].total || 0);
+		const res = transactions.filter(o => parseInt(o.month) === month)[0] || {total: 0}
+		const m = parseInt(res.total);
 		return {
 			m,
 			s: budget - m

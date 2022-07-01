@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import { numberWithCommas } from './utils/numberWithCommas';
+import { getMonth } from './utils/getMonth';
 
 export const StyledNumber = styled.div`
   font-family: 'Barlow Condensed', sans-serif;
@@ -29,13 +30,14 @@ export const StyledDetail = styled.div`
 `;
 
 const showAmountWithSaving = (item, month) => {
-	if (!item[`s${month}`]) return <StyledNumber>{numberWithCommas(item[`m${month}`])}€</StyledNumber>;
+	const actualMonth = getMonth()
+	if (month === actualMonth || item[`s${month}`] === undefined) return <StyledNumber>{numberWithCommas(item[`m${month}`])}€</StyledNumber>;
 	return (
 		<StyledSubItems>
 			<StyledNumber>{numberWithCommas(item[`m${month}`])}€</StyledNumber>
 			<StyledNumber
 				red={item[`s${month}`] < 0}
-				green={item[`s${month}`] > 0}
+				green={item[`s${month}`] >= 0}
 			>{numberWithCommas(item[`s${month}`])}€
 			</StyledNumber>
 		</StyledSubItems>
